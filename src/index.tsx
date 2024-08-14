@@ -1,9 +1,12 @@
+import "jquery";
 import "jquery-dropdown/jquery-dropdown.css";
 import "jquery-dropdown/jquery-dropdown.js";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "slick-carousel";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import "../src/assets/css/plugins.css";
 import "../src/assets/css/style.css";
 import "./assets/js/custom";
@@ -20,11 +23,11 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: Layout,
+    element: <Layout />, // React Router v6'da element olarak gönderilmeli
     children: [
       {
         path: "/",
-        Component: Home,
+        element: <Home />, // React Router v6'da element olarak gönderilmeli
       },
     ],
   },
@@ -36,7 +39,7 @@ const router = createBrowserRouter([
         <Outlet />
       </div>
     ),
-    children: [{ path: "users", Component: UsersPage }],
+    children: [{ path: "users", element: <UsersPage /> }],
   },
   {
     path: "*",

@@ -1,12 +1,24 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "outDir": "./dist",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "esModuleInterop": true
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "baseUrl": "src", // Base URL belirleme
+    "paths": {
+      "@components/*": ["components/*"], // Kısayol tanımları
+      "assets/*": ["assets/*"]
+    }
   },
-  "include": ["src/**/*", "src"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

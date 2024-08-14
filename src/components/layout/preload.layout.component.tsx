@@ -1,10 +1,10 @@
 import React from "react";
-import logo1 from "../../assets/images/logo1.png";
+import { LogoMain } from "../../assets/static/images";
 function Preload() {
   return (
     <>
       <div id="preloader">
-        <img className="logo" src={logo1} alt="" width="119" height="58" />
+        <img className="logo" src={LogoMain} alt="" width="119" height="58" />
         <div id="status">
           <span></span>
           <span></span>
