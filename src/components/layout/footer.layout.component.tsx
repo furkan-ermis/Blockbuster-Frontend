@@ -1,6 +1,5 @@
 import React from "react";
-import logo1 from "../../assets/images/logo1.png";
-import bgfooter from "../../assets/images/uploads/ft-bg.jpg";
+import { FooterBg, LogoMain } from "../../assets/static/images";
 function Footer() {
   return (
     <div>
@@ -8,13 +7,13 @@ function Footer() {
         {/* footer section*/}
         <footer
           className="ht-footer"
-          style={{ backgroundImage: `url(${bgfooter})` }}
+          style={{ backgroundImage: `url(${FooterBg})` }}
         >
           <div className="container">
             <div className="flex-parent-ft">
               <div className="flex-child-ft item1">
                 <a href="index.html">
-                  <img className="logo" src={logo1} alt="" />
+                  <img className="logo" src={LogoMain} alt="" />
                 </a>
                 <p>
                   5th Avenue st, manhattan

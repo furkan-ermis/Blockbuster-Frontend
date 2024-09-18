@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Footer from "./layout/footer.layout.component";
 import Header from "./layout/header.layout.component";
 import Loginpopup from "./layout/loginpopup.layout.component";

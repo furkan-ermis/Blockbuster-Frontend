@@ -4,9 +4,9 @@ $(window).on("load", function () {
   var status = $("#status");
   var preloader = $("#preloader");
   var body = $("body");
-  status.fadeOut(300); // will first fade out the loading animation
-  preloader.delay(300).fadeOut("slow"); // will fade out the white DIV that covers the website.
-  body.delay(0).css({ overflow: "visible" });
+  status.fadeOut(10); // will first fade out the loading animation
+  preloader.fadeOut("slow"); // will fade out the white DIV that covers the website.
+  body.css({ overflow: "visible" });
 });
 $(function () {
   "use strict";
@@ -19,7 +19,7 @@ $(function () {
         $(this).children(".dropdown-menu").fadeIn(300);
       },
       function () {
-        $(this).children(".dropdown-menu").fadeOut(300);
+        $(this).children(".dropdown-menu").fadeOut(100);
       }
     );
   } else {

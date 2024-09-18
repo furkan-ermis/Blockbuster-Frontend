@@ -12,7 +12,11 @@
 import "fancybox";
 (function (window, document, $, undefined) {
   "use strict";
-
+  $(document).ready(function () {
+    $(".fancybox-media").fancybox({
+      type: "iframe",
+    });
+  });
   var H = $("html"),
     W = $(window),
     D = $(document),

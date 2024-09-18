@@ -1,5 +1,5 @@
 import React from "react";
-import sliderbg from "../../assets/images/uploads/slider-bg.jpg";
+import { SliderBg } from "../../assets/static/images";
 import Movie from "./movie.components";
 function Slider() {
   const movies = [];
@@ -11,7 +11,7 @@ function Slider() {
   return (
     <div
       style={{
-        backgroundImage: `url(${sliderbg})`,
+        backgroundImage: `url(${SliderBg})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",

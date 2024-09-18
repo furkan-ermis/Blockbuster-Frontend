@@ -1,6 +1,5 @@
 import React from "react";
-import logo1 from "../../assets/images/logo1.png";
-import topSearch from "../../assets/images/uploads/topsearch.png";
+import { DropIcon, LogoMain, TopSearch } from "../../assets/static/images";
 function Header() {
   return (
     <div>
@@ -26,7 +25,7 @@ function Header() {
                 <a href="index.html">
                   <img
                     className="logo"
-                    src={logo1}
+                    src={LogoMain}
                     alt=""
                     width={119}
                     height={58}
@@ -44,10 +43,13 @@ function Header() {
                   </li>
                   <li className="dropdown first">
                     <a
-                      className="btn btn-default dropdown-toggle lv1"
+                      className="dosis btn btn-default dropdown-toggle lv1"
                       data-toggle="dropdown"
+                      style={{
+                        background: `url(${DropIcon})  no-repeat right 2px center`,
+                      }}
                     >
-                      Home <i className="fa fa-angle-down" aria-hidden="true" />
+                      Home
                     </a>
                     <ul className="dropdown-menu level1">
                       <li>
@@ -206,14 +208,18 @@ function Header() {
             </nav>
             {/* top search form */}
             <div className="top-search">
-              <select>
+              <select
+                style={{
+                  background: `url(${DropIcon})  no-repeat right 20px center`,
+                }}
+              >
                 <option value="united">TV show</option>
                 <option value="saab">Others</option>
               </select>
               <input
                 type="text"
                 style={{
-                  background: `url(${topSearch})  no-repeat right 20px center`,
+                  background: `url(${TopSearch})  no-repeat right 20px center`,
                 }}
                 placeholder="Search for a movie, TV Show or celebrity that you are looking for"
               />

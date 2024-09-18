@@ -1,5 +1,5 @@
 import React from "react";
-import slider1 from "../../assets/images/uploads/slider1.jpg";
+import { Slider1 } from "../../assets/static/images";
 
 // Props tipini tanımlayın
 interface MovieProps {
@@ -12,7 +12,7 @@ const Movie: React.FC<MovieProps> = ({ key }) => {
     <div className="movie-item" key={key}>
       <div className="mv-img">
         <a href="#">
-          <img src={slider1} alt="" width={265} height={437} />
+          <img src={Slider1} alt="" width={265} height={437} />
         </a>
       </div>
       <div className="title-in">
