@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "../../assets/css/Slider.css";
 import { SliderBg } from "../../assets/static/images";
-import Movie from "./movie.components";
+import { Movie as MovieModel } from "../../models/movie.model"; // Movie modeli
+import { getMoviesPopuler } from "../../services/movie.service";
+import MovieSlider from "./movie.components"; // Yeni slider bileşenini içe aktarıyoruz
 function Slider() {
-  const movies = [];
-  let i = 1;
-  while (i < 10) {
-    movies.push(<Movie key={i} />);
-    i++;
-  }
   return (
     <div
       style={{
@@ -35,7 +32,10 @@ function Slider() {
                 <i className="ion-social-youtube" />
               </a>
             </div>
-            <div className="slick-multiItemSlider">{movies}</div>
+            <div className="">
+              {/* Yeni Slider Bileşeni Buraya Ekleniyor */}
+              <MovieSlider />
+            </div>
           </div>
         </div>
       </div>

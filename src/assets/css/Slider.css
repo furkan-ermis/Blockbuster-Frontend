@@ -1,0 +1,82 @@
+.slider-container {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 1200px; /* Slider'ın toplam genişliği */
+}
+
+.movie-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.movie-card {
+  position: relative;
+  width: 100%; /* Kart genişliği esnek yapıldı */
+  max-width: 420px; /* Maksimum genişlik */
+  height: auto; /* Yükseklik otomatik olacak, oran bozulmayacak */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%; /* Görseller de kartın genişliğine uyacak */
+  height: auto; /* Görsellerin oranı korunacak */
+  transform: none;
+}
+
+.movie-card:hover {
+  transform: scale(1.05) perspective(600px) rotateY(20deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.movie-category {
+  font-size: 12px;
+  color: #ffcc00;
+  margin: 0 5px 5px 0;
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+  text-shadow: 4px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.movie-rating {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-rating i {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #ffcc00;
+}
+
+.slick-dots {
+  bottom: -30px; /* Noktaların konumunu ayarladık */
+}
+
+/* Slider oklarını gizliyoruz */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}

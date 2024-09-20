@@ -13,7 +13,6 @@ import "./assets/js/custom";
 import "./assets/js/plugins";
 import "./assets/js/plugins2.js";
 import Layout from "./components/layout.component";
-import Deneme from "./pages/deneme";
 import Home from "./pages/home.page";
 import Movie from "./pages/movie.page";
 import Movies from "./pages/movies.page";
@@ -22,7 +21,6 @@ import NewsDetail from "./pages/newsDetail.page";
 import Series from "./pages/series.page";
 import SingleSeries from "./pages/singleSeries.page";
 import UsersPage from "./pages/users.page";
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -76,10 +74,6 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <>Sayfa Bulunamadı</>,
-  },
-  {
-    path: "/deneme",
-    element: <Deneme />, // React Router v6'da element olarak gönderilmeli
   },
 ]);
 

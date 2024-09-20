@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Slider1, TrailerImg } from "../assets/static/images";
 function Movie() {
   const { movieId } = useParams<{ movieId: string }>(); // movieId parametresini alıyoruz
-
+  console.log(movieId);
   return (
     <>
       <div

@@ -25,17 +25,15 @@ export interface Genre {
 	name: string;
   }
   
-  // Movie model
-  export interface Movie {
+export interface MovieDetails {
 	adult: boolean;
 	backdrop_path: string;
 	belongs_to_collection: string | null;
 	budget: number;
-	genres: Genre[];
+	genre_ids: Genre[];  // Burada da `number[]` kullanıyoruz çünkü JSON'da bu sadece ID'leri içeriyor.
 	homepage: string;
 	id: number;
 	imdb_id: string;
-	origin_country: string[];
 	original_language: string;
 	original_title: string;
 	overview: string;
@@ -54,4 +52,20 @@ export interface Genre {
 	vote_average: number;
 	vote_count: number;
   }
-  
+  // Movie model
+export interface Movie {
+	adult: boolean;
+	backdrop_path: string;
+	genre_ids: number[];  // Burada `number[]` kullanıyoruz çünkü JSON'da bu sadece ID'leri içeriyor.
+	id: number;
+	original_language: string;
+	original_title: string;
+	overview: string;
+	popularity: number;
+	poster_path: string;
+	release_date: string;
+	title: string;
+	video: boolean;
+	vote_average: number;
+	vote_count: number;
+  }
